@@ -88,7 +88,12 @@ def sum_radii(circles):
     #
     #       Instead, use explicit loops, as you have for other problems.
     # -------------------------------------------------------------------------
+    sum = 0
 
+    for k in range(len(circles)):
+        sum = sum + circles[k].radius
+
+    return sum
 
 ###############################################################################
 # Some problems iterate (loop) through PART of the sequence,
@@ -155,7 +160,11 @@ def count_last_n_odds(integers, n):
     # TODO: 3. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
-
+    count = 0
+    for k in range(len(integers) - 1, len(integers) - n - 1, -1):
+        if integers[k] % 2 == 1:
+            count = count + 1
+    return count
 
 ###############################################################################
 # Some problems iterate (loop) through PART of the sequence,
@@ -230,6 +239,13 @@ def index_of_first_negative(numbers):
     # TODO: 4. Implement and test this function.
     #     The testing code is already written for you (above).
     # -------------------------------------------------------------------------
+    for k in range(len(numbers)):
+        if numbers[k] < 0:
+            return k
+
+    return -1
+
+
 
 
 def run_test_contains_an_a():
@@ -298,7 +314,11 @@ def contains_an_a(s):
     #   Use an explicit loop, as you have done in the other problems.
     #   No fair using the   count   or   find   string methods.
     # -------------------------------------------------------------------------
+    for k in range(len(s)):
+        if s[k] == 'a':
+            return True
 
+    return False
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
