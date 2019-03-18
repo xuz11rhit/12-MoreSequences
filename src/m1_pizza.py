@@ -489,6 +489,15 @@ def run_test_fancy_polygon():
     fancy_polygon(window, circle, 20, 7, 'lime green', 5)
     window.close_on_mouse_click()
 
+    title = ('FANCY POLYGON test 4:  10 black lines on blue circle,'
+             + ' hops = 2.')
+    window = rg.RoseWindow(480, 350, title)
+
+    circle = rg.Circle(rg.Point(240, 165), 150)
+    circle.fill_color = 'blue'
+    fancy_polygon(window, circle, 10, 2, 'black', 3)
+    window.close_on_mouse_click()
+
     # -------------------------------------------------------------------------
     # Test 4:  (YOU write THIS test).
     #   If you wish, try even more tests to get some really cool
